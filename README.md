@@ -1,6 +1,21 @@
 # rails-jsonapi-example
 
-Small example API on Ruby on Rails using JSONAPI::Resources.
+Small example API on Ruby on Rails using [JSONAPI::Resources](http://jsonapi-resources.com/).
+
+## Description
+
+This example API follows the JSON API specification. If you are familiar with it
+then no much description is necessary and you can easily dive into the source.
+
+Here is the list of all things of what it does:
+
+1.  Receives and URL and saves it into the database.
+2.  Parses the remote content using [Nokogiri](https://github.com/sparklemotion/nokogiri)
+library and values of the allowed tags (`h1`, `h2`, `h3` and `a`) and stores
+them in the database.
+3.  Lists all stored pages.
+4.  Shows a single page by its ID.
+5.  Lists all stored tags for a specified page.
 
 ## Scaffold
 
@@ -16,7 +31,6 @@ cd rails-jsonapi-example
 
 # add gems using `bundle`
 bundle add jsonapi-resources
-bundle add validate_url
 bundle add nokogiri
 bundle add minitest
 bundle add webmock
@@ -63,10 +77,9 @@ api_v1_page_tags GET  /api/v1/pages/:page_id/tags(.:format) api/v1/page_tags#get
 
 #### `POST` `/api/v1/pages`
 
-Receives an URL, validates it and stores the URL in the database. The remote
-content is parsed using [Nokogiri](https://github.com/sparklemotion/nokogiri)
-library and values of the allowed tags (`h1`, `h2`, `h3` and `a`) are also
-stored in the database.
+Receives an URL, validates it and stores it into the database. The remote
+content is parsed and values of the allowed tags (`h1`, `h2`, `h3` and `a`) are
+also stored in the database.
 
 ```bash
 curl -i -H "Accept: application/vnd.api+json" -H 'Content-Type:application/vnd.api+json' -X POST -d '{"data": {"type": "pages", "attributes": {"url": "https://example.com/" }}}' http://localhost:3000/api/v1/pages
