@@ -9,7 +9,6 @@ gem 'minitest', '~> 5.11'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.0'
 gem 'sqlite3'
-gem 'validate_url', '~> 1.0'
 gem 'webmock', '~> 3.4'
 
 group :development, :test do
