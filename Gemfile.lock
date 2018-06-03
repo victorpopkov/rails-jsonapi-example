@@ -54,7 +54,7 @@ GEM
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
     erubi (1.7.1)
-    ffi (1.9.23)
+    ffi (1.9.24)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashdiff (0.3.7)
@@ -165,4 +165,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
