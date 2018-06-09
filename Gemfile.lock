@@ -54,7 +54,7 @@ GEM
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
     erubi (1.7.1)
-    ffi (1.9.24)
+    ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashdiff (0.3.7)
@@ -136,7 +136,7 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    webmock (3.4.1)
+    webmock (3.4.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
